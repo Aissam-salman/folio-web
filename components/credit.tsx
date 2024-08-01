@@ -9,7 +9,7 @@ const Credit = () => {
             <p>
                 3D with ThreeJS
             </p>
-            <p>
+            <p className={`underline`}>
                 By Me
             </p>
         </div>
