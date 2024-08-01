@@ -1,10 +1,8 @@
-'use client'
-import Name3D from "@/components/threeName/Name3D";
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Profile from "@/components/profile";
 import Credit from "@/components/credit";
-import Tech from "@/components/tech";
+import Name3D from "@/components/threeName/Name3D";
 
 export default function Home() {
     // @ts-ignore
@@ -14,7 +12,7 @@ export default function Home() {
             <Name3D/>
             <Footer/>
             <Profile/>
-            <Tech/>
+            {/*<Tech/>*/}
             <Credit/>
         </main>
     );
