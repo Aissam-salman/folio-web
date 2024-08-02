@@ -20,3 +20,10 @@
     width: 100vw;
     height: 100vh;
 }
+
+.gravityButton {
+    transition: transform 0.3s, opacity 0.3s;
+    /*variables from GravityButton components */
+    transform: translate(var(--tx, 0), var(--ty, 0));
+    opacity: var(--opacity, 0.25);
+}

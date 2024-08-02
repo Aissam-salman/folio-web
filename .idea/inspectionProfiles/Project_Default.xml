@@ -51,5 +51,8 @@
       </option>
     </inspection_tool>
     <inspection_tool class="PyUnusedLocalInspection" enabled="true" level="WARNING" enabled_by_default="true" editorAttributes="WARNING_ATTRIBUTES" />
+    <inspection_tool class="RequiredAttributes" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="myAdditionalRequiredHtmlAttributes" value="children" />
+    </inspection_tool>
   </profile>
 </component>
