@@ -2,6 +2,7 @@ import React from 'react';
 import GravityButton from "@/components/gravity-button";
 import JavaSvg from "@/components/JavaSvg";
 import JSSvg from "@/components/JSSvg";
+import ReactSvg from "@/components/ReactSvg";
 
 const Tech = () => {
 
@@ -15,7 +16,7 @@ const Tech = () => {
                     <JSSvg width={50} height={50}/>
                 </GravityButton>
                 <GravityButton>
-                    <JSSvg width={50} height={50}/>
+                    <ReactSvg width={50} height={50}/>
                 </GravityButton>
             </div>
         </div>
