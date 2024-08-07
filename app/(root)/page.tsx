@@ -1,9 +1,8 @@
 import Navbar from "@/components/navbar";
 import Footer from "@/components/footer";
 import Profile from "@/components/profile";
-import Credit from "@/components/credit";
 import Name3D from "@/components/threeName/Name3D";
-import Tech from "@/components/tech";
+import TextJp from "@/components/TextJp";
 
 export default function Home() {
     // @ts-ignore
@@ -13,8 +12,7 @@ export default function Home() {
             <Name3D/>
             <Footer/>
             <Profile/>
-            <Tech/>
-            <Credit/>
+            <TextJp>ありがとう！</TextJp>
         </main>
     );
 }
