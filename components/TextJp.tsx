@@ -10,7 +10,8 @@ interface TextJpProps {
 
 const TextJap: React.FC<TextJpProps> = ({children, className = ''}) => {
     return (
-        <div className={notoJp.className + `p-6 text-7xl font-black text-right text-white mb-3` + (className || '')}>
+        <div
+            className={notoJp.className + `p-6 text-7xl font-black text-right text-tropical_indigo-300 mb-3` + (className || '')}>
             {children}
         </div>
     );

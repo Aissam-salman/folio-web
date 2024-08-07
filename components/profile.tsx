@@ -13,7 +13,7 @@ const Profile = () => {
                                width={300}
                                height={300}/>
                     </div>
-                    <div className="text-white gap-5 flex flex-col items-start">
+                    <div className="text-dun-900 gap-5 flex flex-col items-start">
                         <div className={`flex justify-items-center gap-10`}>
                             <Image
                                 src="/rocket.webp"
@@ -26,12 +26,12 @@ const Profile = () => {
                                 Hi, I&apos;m Developer Java & JS.
                             </div>
                         </div>
-                        <div className={`text-white text-left text-3xl font-light`}>
-                            With over 2 years of experience in development,<br/>
-                            specializing in crafting and delivering rock-solid IT solutions. <br/>
-                            Passionate about code, I’m on the hunt for a new adventure to <br/>
-                            contribute to exciting and ambitious projects. <br/>
-                            If my code could cook, it would be a Michelin-starred chef. <br/>
+                        <div className={`text-white text-left text-3xl font-light w-[50vw]`}>
+                            With over 2 years of experience in development,
+                            specializing in crafting and delivering rock-solid IT solutions.
+                            Passionate about code, I’m on the hunt for a new adventure to
+                            contribute to exciting and ambitious projects.
+                            If my code could cook, it would be a Michelin-starred chef.
                             Ready to whip up some innovative software !
                         </div>
                     </div>
