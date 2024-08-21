@@ -8,7 +8,7 @@ const Profile = () => {
                 className="scroll-auto flex align-middle justify-center h-[100vh] p-10 md:px-[250px] ">
                 <div className="flex gap-10 flex-row opacity on">
                     <div className="flex items-start justify-center">
-                        <Image src="/profil-aissam.svg" alt="Profile Image"
+                        <Image src="/img/profil-aissam.svg" alt="Profile Image"
                                className={``}
                                width={300}
                                height={300}/>
@@ -16,7 +16,7 @@ const Profile = () => {
                     <div className="text-dun-900 gap-5 flex flex-col items-start">
                         <div className={`flex justify-items-center gap-10`}>
                             <Image
-                                src="/rocket.webp"
+                                src="/img/rocket.webp"
                                 alt="rocket"
                                 width={50}
                                 height={50}

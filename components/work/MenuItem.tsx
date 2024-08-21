@@ -157,9 +157,9 @@ const MenuItem: React.FC<MenuItemProps> = ({text, subText, imgSrc, linkWork}) =>
             <span className="block text-xl text-transparent" ref={subTextRef}>{subText}</span>
 
             <div ref={revealRef}
-                 className={`absolute top-0 sm:left-[40%] left-[25%] w-56 h-80 opacity-0 pointer-events-none`}>
+                 className={`absolute top-0 sm:left-[40%] left-[25%] w-[30%] h-80 opacity-0 pointer-events-none`}>
                 <div ref={revealInnerRef} className="w-full h-full overflow-hidden">
-                    <div ref={revealImageRef} className="w-full h-full bg-center bg-cover"
+                    <div ref={revealImageRef} className="w-full h-full bg-contain bg-no-repeat"
                          style={{backgroundImage: `url(${imgSrc})`}}></div>
                 </div>
             </div>
