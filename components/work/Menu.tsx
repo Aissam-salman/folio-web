@@ -1,7 +1,11 @@
 import React from "react";
 import MenuItem from "@/components/work/MenuItem";
 
-const Menu: React.FC = () => {
+interface MenuProps {
+    id: string;
+}
+
+const Menu = ({id}: MenuProps) => {
     const menuItems = [
         {
             text: 'Clone notion',
@@ -24,7 +28,7 @@ const Menu: React.FC = () => {
     ];
 
     return (
-        <div className={`p-52   `}>
+        <div id={id} className={`p-52   `}>
             <nav className="flex flex-col space-y-4">
                 {menuItems.map((item, index) => (
                     <MenuItem key={index} {...item} />

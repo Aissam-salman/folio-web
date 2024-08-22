@@ -14,7 +14,7 @@ export default function Home() {
             <Name3D/>
             <Footer/>
             <Profile/>
-            <Menu/>
+            <Menu id="works"/>
             <TextJp>ありがとう！</TextJp>
         </main>
     );
