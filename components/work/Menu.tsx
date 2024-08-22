@@ -28,7 +28,7 @@ const Menu = ({id}: MenuProps) => {
     ];
 
     return (
-        <div id={id} className={`p-52   `}>
+        <div id={id} className={`py-40 p-5 sm:p-52`}>
             <nav className="flex flex-col space-y-4">
                 {menuItems.map((item, index) => (
                     <MenuItem key={index} {...item} />

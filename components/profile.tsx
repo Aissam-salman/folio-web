@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Profile = () => {
     return (
-        <div className="flex flex-col items-center p-4 md:p-10 lg:px-16">
+        <div className="flex flex-col items-center py-20 p-4 md:p-10 lg:px-16">
             <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
                 <div className="relative flex justify-center">
                     <Image

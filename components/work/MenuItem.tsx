@@ -2,6 +2,8 @@
 import React, {useCallback, useEffect, useRef, useState} from 'react';
 import gsap from "gsap";
 import ScrambleText from "@/lib/ScrambleText";
+import {useMediaQuery} from "usehooks-ts";
+import Image from "next/image";
 
 interface MenuItemProps {
     text: string;
@@ -12,6 +14,8 @@ interface MenuItemProps {
 
 
 const MenuItem: React.FC<MenuItemProps> = ({text, subText, imgSrc, linkWork}) => {
+    const isMobileOrTablet = useMediaQuery("(max-width: 768px)");
+
     const itemRef = useRef<HTMLAnchorElement>(null);
     const revealRef = useRef<HTMLDivElement>(null);
     const revealInnerRef = useRef<HTMLDivElement>(null);
@@ -146,25 +150,49 @@ const MenuItem: React.FC<MenuItemProps> = ({text, subText, imgSrc, linkWork}) =>
         };
     }, [])
 
-
-    return (
-        <a href={linkWork} target={`_blank`} ref={itemRef} className="relative block p-4 group hover:cursor-pointer"
-           data-img={imgSrc}
-           onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave}>
-            <span className="block text-7xl text-dun-900 font-semibold">
+    if (isMobileOrTablet) {
+        return (
+            <a
+                href={linkWork}
+                target={"_blank"}
+                className="relative p-4 group flex justify-between"
+            >
+                <div className={"flex flex-col"}>
+                    <span className="block text:2xl sm:text-7xl text-dun-900 font-semibold">
+                        <span className={"text-[#C3B27C]"}>{text}</span>
+                    </span>
+                    <span className="block text-xl text-[#7C88C3]">{subText}</span>
+                </div>
+                <Image
+                    src={imgSrc}
+                    alt={"screenshot website"}
+                    width={100}
+                    height={100}
+                />
+            </a>
+        )
+    } else {
+        return (
+            <a href={linkWork} target={`_blank`} ref={itemRef} className="relative block p-4 group hover:cursor-pointer"
+               data-img={imgSrc}
+               onMouseMove={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+            <span className="block text:2xl sm:text-7xl text-dun-900 font-semibold">
                 <span ref={textRef}>{text}</span>
             </span>
-            <span className="block text-xl text-transparent" ref={subTextRef}>{subText}</span>
+                <span className="block text-xl text-transparent" ref={subTextRef}>{subText}</span>
 
-            <div ref={revealRef}
-                 className={`absolute top-0 sm:left-[40%] left-[25%] w-[30%] h-80 opacity-0 pointer-events-none`}>
-                <div ref={revealInnerRef} className="w-full h-full overflow-hidden">
-                    <div ref={revealImageRef} className="w-full h-full bg-contain bg-no-repeat"
-                         style={{backgroundImage: `url(${imgSrc})`}}></div>
+                <div ref={revealRef}
+                     className={`absolute top-0 sm:left-[40%] left-[25%] w-[30%] h-80 opacity-0 pointer-events-none`}>
+                    <div ref={revealInnerRef} className="w-full h-full overflow-hidden">
+                        <div ref={revealImageRef} className="w-full h-full bg-contain bg-no-repeat"
+                             style={{backgroundImage: `url(${imgSrc})`}}></div>
+                    </div>
                 </div>
-            </div>
-        </a>
-    );
+            </a>
+        );
+    }
+
+
 };
 
 export default MenuItem;
