@@ -24,7 +24,6 @@
 
 @media (max-width: 600px) {
     .canvas {
-        width: 300px;
         height: 300px;
         margin: auto;
     }
@@ -32,7 +31,6 @@
 
 @media screen and (min-width: 601px) and (max-width: 930px) {
     .canvas {
-        width: 600px;
         margin: auto;
     }
 }

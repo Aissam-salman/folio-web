@@ -1,53 +1,44 @@
-"use client"
 import React from 'react';
 import Image from "next/image";
-import {useMediaQuery} from "usehooks-ts";
-import {cn} from "@/lib/utils";
 
 const Profile = () => {
-    const isMobile = useMediaQuery("(max-width: 650px)");
     return (
-        <>
-            <div
-                className="scroll-auto flex-col flex align-middle justify-center sm:h-[100vh] p-10 md:px-[250px] ">
-                <div className="flex gap-10 flex-col sm:flex-row opacity ">
-                    <div className="flex items-start justify-center">
-                        <Image src="/img/profil-aissam.svg" alt="Profile Image"
-                               className={`w-25`}
-                               width={200}
-                               height={200}
+        <div className="flex flex-col items-center p-4 md:p-10 lg:px-16">
+            <div className="flex flex-col sm:flex-row gap-6 sm:gap-10">
+                <div className="relative flex justify-center">
+                    <Image
+                        src="/img/profil-aissam.svg"
+                        alt="Profile Image"
+                        width={200}
+                        height={200}
+                        className={"w-24 h-24  sm:w-full sm:h-full "}
+                    />
+                </div>
+                <div className="text-dun-900 flex flex-col justify-center gap-3 sm:gap-6 items-center sm:items-start">
+                    <div className="flex items-center gap-4 sm:gap-8">
+                        <Image
+                            src="/img/rocket.webp"
+                            alt="rocket"
+                            width={30}
+                            height={30}
+                            className="hidden sm:block w-10 h-10"
                         />
+                        <div className="sm:text-left text-center font-black text-lg sm:text-2xl lg:text-3xl">
+                            Hi, I&apos;m Developer Java & JS.
+                        </div>
                     </div>
-                    <div className="text-dun-900 gap-5 flex flex-col items-start">
-                        <div className={"flex sm:flex-col justify-items-center gap-10"}>
-                            <Image
-                                src="/img/rocket.webp"
-                                alt="rocket"
-                                width={30}
-                                height={30}
-                                className={
-                                    cn(isMobile && "hidden",
-                                        `-translate-y-3 w-10 h-10 sm:w-15 sm:h-15`)
-                                }
-                            />
-                            <div className={cn(
-                                isMobile && "text-center",
-                                `font-black text-lg sm:text-3xl`)}>
-                                Hi, I&apos;m Developer Java & JS.
-                            </div>
-                        </div>
-                        <div className={`text-white text-left text-3xl font-light w-[50vw]`}>
-                            With over 2 years of experience in development,
-                            specializing in crafting and delivering rock-solid IT solutions.
-                            Passionate about code, I’m on the hunt for a new adventure to
-                            contribute to exciting and ambitious projects.
-                            If my code could cook, it would be a Michelin-starred chef.
-                            Ready to whip up some innovative software !
-                        </div>
+                    <div
+                        className="text-white text-wrap text-left sm:text-left text-xl sm:text-2xl lg:text-3xl font-light max-w-3xl px-2">
+                        With over 2 years of experience in development,
+                        specializing in crafting and delivering rock-solid IT solutions.
+                        Passionate about code, I’m on the hunt for a new adventure to
+                        contribute to exciting and ambitious projects.
+                        If my code could cook, it would be a Michelin-starred chef.
+                        Ready to whip up some innovative software!
                     </div>
                 </div>
             </div>
-        </>
+        </div>
     );
 };
 
