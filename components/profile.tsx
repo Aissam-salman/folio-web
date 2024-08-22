@@ -1,28 +1,38 @@
+"use client"
 import React from 'react';
 import Image from "next/image";
+import {useMediaQuery} from "usehooks-ts";
+import {cn} from "@/lib/utils";
 
 const Profile = () => {
+    const isMobile = useMediaQuery("(max-width: 650px)");
     return (
         <>
             <div
-                className="scroll-auto flex align-middle justify-center h-[100vh] p-10 md:px-[250px] ">
-                <div className="flex gap-10 flex-row opacity on">
+                className="scroll-auto flex-col flex align-middle justify-center sm:h-[100vh] p-10 md:px-[250px] ">
+                <div className="flex gap-10 flex-col sm:flex-row opacity ">
                     <div className="flex items-start justify-center">
                         <Image src="/img/profil-aissam.svg" alt="Profile Image"
-                               className={``}
-                               width={300}
-                               height={300}/>
+                               className={`w-25`}
+                               width={200}
+                               height={200}
+                        />
                     </div>
                     <div className="text-dun-900 gap-5 flex flex-col items-start">
-                        <div className={`flex justify-items-center gap-10`}>
+                        <div className={"flex sm:flex-col justify-items-center gap-10"}>
                             <Image
                                 src="/img/rocket.webp"
                                 alt="rocket"
-                                width={50}
-                                height={50}
-                                className={`-translate-y-3 w-10 h-10 sm:w-15 sm:h-15 `}
+                                width={30}
+                                height={30}
+                                className={
+                                    cn(isMobile && "hidden",
+                                        `-translate-y-3 w-10 h-10 sm:w-15 sm:h-15`)
+                                }
                             />
-                            <div className={`font-black text-3xl`}>
+                            <div className={cn(
+                                isMobile && "text-center",
+                                `font-black text-lg sm:text-3xl`)}>
                                 Hi, I&apos;m Developer Java & JS.
                             </div>
                         </div>

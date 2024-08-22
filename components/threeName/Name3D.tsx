@@ -2,11 +2,8 @@
 import React from 'react';
 import {Canvas} from "@react-three/fiber";
 import Scene from "@/components/threeName/Scene";
-import {useMediaQuery} from "usehooks-ts";
 
 const Name3D = () => {
-    const isMobile = useMediaQuery('(max-width: 600px)');
-
 
     return (
         <div className={"canvas scroll-auto"}>
