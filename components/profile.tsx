@@ -24,7 +24,7 @@ const Profile = () => {
                             className="hidden sm:block w-10 h-10"
                         />
                         <div className="sm:text-left text-center font-black text-lg sm:text-2xl lg:text-3xl">
-                            Hi, I&apos;m Developer Java & JS.
+                            Hi, je suis Aissam
                         </div>
                     </div>
                     <div

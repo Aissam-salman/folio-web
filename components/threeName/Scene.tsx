@@ -10,7 +10,7 @@ import useLayers from "@/components/threeName/user-layers";
 import useSlerp from "@/components/threeName/user-slerp";
 
 const TEXT_PROPS = {
-    fontSize: 2.5,
+    fontSize: 1.5,
     font: 'https://fonts.gstatic.com/s/syncopate/v12/pe0pMIuPIYBCpEV5eFdKvtKqBP5p.woff'
 }
 
@@ -33,7 +33,7 @@ function Title({layers, ...props}: TitleProps) {
     return (
         <group {...props} ref={group}>
             <Text ref={textRef} name="text-panna" material-toneMapped={false} material-color="#FFFFFF" {...TEXT_PROPS}>
-                サルマン・デヴ
+                Developpeur full stack
             </Text>
         </group>
     )

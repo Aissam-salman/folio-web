@@ -2,46 +2,26 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-    background-color: #0C0511;
+
+.group:hover .group-hover\:scale-105 {
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in-out;
 }
 
-.texto {
-    writing-mode: vertical-rl;
-    text-orientation: mixed;
+@keyframes fade-in {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-.texto-r {
-    writing-mode: vertical-lr;
-    text-orientation: mixed;
+.animate-fade-in {
+    animation: fade-in 1s ease-out forwards;
 }
 
-.canvas {
-    width: 100vw;
-    height: 100vh;
-    margin-bottom: 40px;
+.break-inside-avoid {
+    break-inside: avoid;
 }
 
-@media (max-width: 600px) {
-    .canvas {
-        height: 300px;
-        margin: auto;
-    }
+.group:hover .group-hover\:scale-\[1\.02\] {
+    transform: scale(1.02);
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
-
-@media screen and (min-width: 601px) and (max-width: 930px) {
-    .canvas {
-        margin: auto;
-    }
-}
-
-.gravityButton {
-    transition: transform 0.3s, opacity 0.3s;
-    /*variables from GravityButton components */
-    transform: translate(var(--tx, 0), var(--ty, 0));
-    opacity: var(--opacity, 0.25);
-}
-
-
-
-
